@@ -84,14 +84,20 @@ namespace ToDoList.Tests
     {
       // Arrange
       string description01 = "Walk the dog";
-      string description02 = "Wash the dishes";
       Item newItem1 = new Item(description01);
-      Item newItem2 = new Item(description02);
-      List<Item> newList = new List<Item> { newItem1, newItem2};
       //Act
       int item1 = newItem1.ListNumber;
       //Assert
       Assert.AreEqual(item1, 1);
     }
+
+    [TestMethod]
+    public void ItemToString_ReturnsItemString_String()
+    {
+      string description01 = "Walk the dog";
+      Item newItem1 = new Item(description01);
+      Assert.AreEqual("1. Walk the dog", newItem1.ToString());
+    }
+    
   }
 }
