@@ -13,19 +13,28 @@ namespace ToDoList
 
       while (true)
       {
-        Console.WriteLine("Would you like to add an item to your list or view your list? (Add/View)");
+        Console.WriteLine("Would you like to add an item to your list or view your list? (Add/View/Exit)");
         string userNavInput = Console.ReadLine();
         userNavInput = userNavInput.ToUpper();
         if (userNavInput == "ADD")
         {
           // Prompt user input description
-          Console.WriteLine("Please enter the description for the new item.");
-          string description = Console.ReadLine();
-          // Add item to list
-          Item newItem = new Item(description);
-          // Confirm item has been added
-          Console.WriteLine($"'{newItem.Description}' has been added to your list.");
-          // Reprompt add / view
+          Console.WriteLine("Please enter the description for the new item. enter on empty description to stop adding");
+          while (true)
+          {
+            string description = Console.ReadLine();
+            if(description == "")
+            {
+              break;
+            }
+            // Add item to list
+            Item newItem = new Item(description);
+            // Confirm item has been added
+            Console.WriteLine($"'{newItem.Description}' has been added to your list.");
+            Console.WriteLine("Enter the description for another item:");
+            // Reprompt add / view
+            
+          }
         }
         else if (userNavInput == "VIEW")
         {
@@ -42,6 +51,10 @@ namespace ToDoList
             }
           }
             // Print To Do List to Console
+        }
+        else if (userNavInput == "EXIT") 
+        {
+          break;
         }
         else
         {
