@@ -25,5 +25,10 @@ namespace ToDoList.Models
     {
       _instances.Clear();
     }
+
+    public string ToString() 
+    {
+      return $"1. {this.Description}";
+    }
   }
 }
