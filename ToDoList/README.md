@@ -1,21 +1,33 @@
-# TEMPLATE
+# ToDo List
 
-#### By Kirsten Opstad
+#### By Kirsten Opstad & Daniel Yakovlev
 
-#### A template for writing a README.md
+#### A ToDo List Console App
 
 ## Technologies Used
 
-* HTML
-* CSS
-* Bootstrap
-* JavaScript
-* webpack
-* Node.js
+* C#
+* .Net 6
 
 ## Description
 
 ### Objectives (MVP)
+
+App allows the user to add new items to a to do list. The user should also be able to see a list of the tasks they have already added.
+
+For example, the program could work like this:
+
+  Program: Welcome to the To Do List.
+  Program: Would you like to add an item to your list or view your list? (Add/View)
+  User: Add
+  Program: Please enter the description for the new item.
+  User: Walk the dog.
+  Program: 'Walk the dog' has been added to your list. Would you like to add an item to your list or view your list? (Add/View)
+  User: View
+  Program: 1. Walk the dog.
+  Program: Would you like to add an item to your list or view your list? (Add/View)
+
+Consider what the program should print if the user asks to view their list before they have added any items to it.
 
 <!-- [x] Screenshots
 
@@ -24,18 +36,17 @@
 <!-- [Link to operational site](http://www.kirstenopstad.github.com/<REPOSITORY NAME>) -->
 
 ### Goals
-1. Goal1
-2. Goal2
-3. Goal3
+1. Meet MVP
+2. Write Stellar Tests
 
 ## Setup/Installation Requirements
 
 * Clone this repo to your workspace.
 * Navigate to the top level of the directory.
-* In the root directory of the project, run this command to install all packages listed in the package.json:
+<!-- * In the root directory of the project, run this command to install all packages listed in the package.json:
 ```
 $ npm install
-```
+``` -->
 <!-- Instructions for Apps that Use APIs -->
 <!-- * To use this app, you will need to create an account and get an API key from [Link to API](https://www.api-link.io).
   * Visit the API site. Follow signup instructions to get your own unique API key.
@@ -74,7 +85,7 @@ $ npm run test
 
 MIT License
 
-Copyright (c) 2022 Kirsten Opstad
+Copyright (c) 2022 Kirsten Opstad & Daniel Yakovlev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
