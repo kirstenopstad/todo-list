@@ -43,35 +43,9 @@ Consider what the program should print if the user asks to view their list befor
 
 * Clone this repo to your workspace.
 * Navigate to the top level of the directory.
-<!-- * In the root directory of the project, run this command to install all packages listed in the package.json:
-```
-$ npm install
-``` -->
-<!-- Instructions for Apps that Use APIs -->
-<!-- * To use this app, you will need to create an account and get an API key from [Link to API](https://www.api-link.io).
-  * Visit the API site. Follow signup instructions to get your own unique API key.
-  * To add API access to this application:
-    * Open .gitignore and add .env to the list of things git should ignore
-    ```
-    node_modules/
-    .DS_Store
-    dist/
-    coverage/
-    .env
-    ```
-    * Next create .env file and define a variable **API_KEY** that holds _your API key_ and save it
-    ```
-    API_KEY=your-api-key-not-this-text 
-    ```
-    -->
-* Then, to build and serve the project, run: 
-```
-$ npm run start
-```
-To run tests with Jest, run:
-```
-$ npm run test
-```
+* Navigate to program directory ``` $ cd ToDoList ```
+* Build the project with ``` $ dotnet build ```
+* Run the project with ``` $ dotnet run ```
 
 ## Known Bugs
 
