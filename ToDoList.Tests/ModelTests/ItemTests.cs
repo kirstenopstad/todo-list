@@ -96,7 +96,7 @@ namespace ToDoList.Tests
     {
       string description01 = "Walk the dog";
       Item newItem1 = new Item(description01);
-      Assert.AreEqual("1. Walk the dog", newItem1.ToString());
+      Assert.AreEqual("1. Walk the dog", newItem1.ItemToString());
     }
 
     [TestMethod]
@@ -109,7 +109,7 @@ namespace ToDoList.Tests
       Item newItem1 = new Item(description01);
       Item newItem2 = new Item(description02);
       //Assert
-      Assert.AreEqual("2. Wash the dishes", newItem2.ToString());
+      Assert.AreEqual("2. Wash the dishes", newItem2.ItemToString());
     }
     
   }

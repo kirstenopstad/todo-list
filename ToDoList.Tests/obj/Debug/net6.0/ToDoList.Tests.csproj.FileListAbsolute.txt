@@ -99,3 +99,6 @@
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/obj/Debug/net6.0/ToDoList.Tests.pdb
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/obj/Debug/net6.0/ToDoList.Tests.genruntimeconfig.cache
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/obj/Debug/net6.0/ref/ToDoList.Tests.dll
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList.deps.json
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList.runtimeconfig.json
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList
