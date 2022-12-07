@@ -26,7 +26,7 @@ namespace ToDoList.Models
       _instances.Clear();
     }
 
-    public string ToString() 
+    public string ItemToString() 
     {
       return $"{this.ListNumber}. {this.Description}";
     }
