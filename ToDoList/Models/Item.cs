@@ -28,7 +28,7 @@ namespace ToDoList.Models
 
     public string ToString() 
     {
-      return $"1. {this.Description}";
+      return $"{this.ListNumber}. {this.Description}";
     }
   }
 }
