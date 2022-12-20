@@ -7,8 +7,19 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "ToDoList/1.0.0": {
+        "dependencies": {
+          "MySqlConnector": "2.2.0"
+        },
         "runtime": {
           "ToDoList.dll": {}
+        }
+      },
+      "MySqlConnector/2.2.0": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.0.0"
+          }
         }
       }
     }
@@ -18,6 +29,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "MySqlConnector/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RjJlqd22Vtuii7voNV8oyqhekDTmiMUW4legga9bFaJaT+hbyKbwY4/99FZRWkNryVW1BUCZ7GR/N8qhy5155A==",
+      "path": "mysqlconnector/2.2.0",
+      "hashPath": "mysqlconnector.2.2.0.nupkg.sha512"
     }
   }
 }

@@ -102,3 +102,6 @@
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList.deps.json
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList.runtimeconfig.json
 /Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/appsettings.json
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/ToDoList.staticwebassets.runtime.json
+/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/bin/Debug/net6.0/MySqlConnector.dll

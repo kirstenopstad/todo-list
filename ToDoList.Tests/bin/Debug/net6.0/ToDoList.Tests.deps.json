@@ -322,6 +322,14 @@
           }
         }
       },
+      "MySqlConnector/2.2.0": {
+        "runtime": {
+          "lib/net6.0/MySqlConnector.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
+      },
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1127,6 +1135,9 @@
         }
       },
       "ToDoList/1.0.0": {
+        "dependencies": {
+          "MySqlConnector": "2.2.0"
+        },
         "runtime": {
           "ToDoList.dll": {}
         }
@@ -1216,6 +1227,13 @@
       "sha512": "sha512-JZRVXKq19uRhkj8MuzsU8zJhPV2JV3ZToFPAIg+BU53L1L9mNDfm9jXerdRfbrE4HBcf2M54Ij80zPOdlha3+Q==",
       "path": "mstest.testframework/2.2.10",
       "hashPath": "mstest.testframework.2.2.10.nupkg.sha512"
+    },
+    "MySqlConnector/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RjJlqd22Vtuii7voNV8oyqhekDTmiMUW4legga9bFaJaT+hbyKbwY4/99FZRWkNryVW1BUCZ7GR/N8qhy5155A==",
+      "path": "mysqlconnector/2.2.0",
+      "hashPath": "mysqlconnector.2.2.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

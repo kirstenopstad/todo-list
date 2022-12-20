@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cVuSjUoqniDreEVqpn2/BD3h7FdX2uHmFcdo91gkndt0/O9zDAUSb+N+YG0RScRkq4j6bNAvvS7f9oN3Sm6kZQ==",
+  "dgSpecHash": "tyyQxtRoGomNDQzO91QZzMMQyUp0juCfm9D/B/yToD4+pfKL6VBwGu9BiKzMVp/7ePdo7WMuwVDM5phQO/OiBw==",
   "success": true,
   "projectFilePath": "/Users/kro/Desktop/Epicodus/c#/ToDoList.Solution/ToDoList.Tests/ToDoList.Tests.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "/Users/kro/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "/Users/kro/.nuget/packages/mstest.testadapter/2.2.10/mstest.testadapter.2.2.10.nupkg.sha512",
     "/Users/kro/.nuget/packages/mstest.testframework/2.2.10/mstest.testframework.2.2.10.nupkg.sha512",
+    "/Users/kro/.nuget/packages/mysqlconnector/2.2.0/mysqlconnector.2.2.0.nupkg.sha512",
     "/Users/kro/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
     "/Users/kro/.nuget/packages/newtonsoft.json/10.0.3/newtonsoft.json.10.0.3.nupkg.sha512",
     "/Users/kro/.nuget/packages/nuget.frameworks/5.11.0/nuget.frameworks.5.11.0.nupkg.sha512",
