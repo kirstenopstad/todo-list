@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+@* @model directive --> Namespace.Models.Class *@
+@model ToDoList.Models.Category
+
+<h4>Add a new task</h4>
+
+@* sends HTTP POST request by default to *current* URL || RESTful no more! *@
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  <input type="submit" value="Add new category" />
+}
+<p>@Html.ActionLink("Show all categories", "Index")</p>

@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@* @model directive --> Namespace.Models.Class *@
+@model ToDoList.Models.Item
+
+<h4>Add a new task</h4>
+<p><strong>NOTE:</strong> You need to have at least one category before you can add an item!</p>
+<p>Go to @Html.ActionLink("this page", "Create", "Categories") to create a category.</p>
+@* sends HTTP POST request by default to *current* URL || RESTful no more! *@
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+
+  @Html.LabelFor(model => model.Category)
+  @Html.DropDownList("CategoryId")
+
+  <input type="submit" value="Add new task" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all items", "Index")</p>

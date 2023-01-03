@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore; // imports the UseMySql() method 
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Models;
+using ToDoList.Models; // because we use we use the model ToDoListContext within Program.cs
 
 namespace ToDoList
 {
@@ -12,12 +13,22 @@ namespace ToDoList
 
       builder.Services.AddControllersWithViews();
 
-      DBConfiguration.ConnectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
+      // add EF Core as a service to our To Do List app, specify ToDoListContext as the type
+      builder.Services.AddDbContext<ToDoListContext>(
+                        dbContextOptions => dbContextOptions
+                          .UseMySql(
+                            builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]
+                          )
+                        )
+                      );
+
+      // DBConfiguration.ConnectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
 
       WebApplication app = builder.Build();
 
       app.UseHttpsRedirection();
       app.UseStaticFiles();
+
       app.UseRouting();
 
       app.MapControllerRoute(
