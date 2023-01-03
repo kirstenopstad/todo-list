@@ -23,6 +23,8 @@ namespace ToDoList.Controllers
       // 'Items' matches what's set in ToDoListContext.cs
       List<Item> model = _db.Items
                             .Include(item => item.Category)
+                            .OrderBy(item => item.DueBy)
+                            .OrderBy(item => item.Status)
                             .ToList();
       return View(model);
     }
@@ -117,6 +119,16 @@ namespace ToDoList.Controllers
     {
       ItemTag joinEntry = _db.ItemTags.FirstOrDefault(entry => entry.ItemTagId == joinId);
       _db.ItemTags.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public ActionResult StatusComplete(int itemId)
+    {
+      Item thisItem = _db.Items.FirstOrDefault(item => item.ItemId == itemId);
+      thisItem.Status = true;
+      _db.Update(thisItem);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

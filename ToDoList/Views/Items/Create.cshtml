@@ -17,6 +17,9 @@
   @Html.LabelFor(model => model.Category)
   @Html.DropDownList("CategoryId")
 
+  @Html.LabelFor(model => model.DueBy)
+  @Html.TextBoxFor(model => model.DueBy, new { type="datetime-local"})
+
   <input type="submit" value="Add new task" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
