@@ -40,15 +40,19 @@ namespace ToDoList.Controllers
     public ActionResult Create(Item item)
     {
         // if no category
-        if (item.CategoryId == 0)
+        if (!ModelState.IsValid)
         {
-          return RedirectToAction("Create");
+          ViewBag.CategoryId = new SelectList(_db.Categories, "CategoryId", "Name");
+          return View(item);
         }
-        // Update DbSet  
-        _db.Items.Add(item);
-        // Update DbContext 
-        _db.SaveChanges();
-        return RedirectToAction("Index");
+        else
+        {
+          // Update DbSet  
+          _db.Items.Add(item);
+          // Update DbContext 
+          _db.SaveChanges();
+          return RedirectToAction("Index");
+        }
     }
 
     // parameter needs to match the property from anonymous obj created in Create.cshtml
