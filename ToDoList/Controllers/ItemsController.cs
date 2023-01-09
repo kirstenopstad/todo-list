@@ -1,27 +1,38 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity; // to access UserManager
 using ToDoList.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks; // to use async methods
+using System.Security.Claims; // to use claim based authorization
 
 namespace ToDoList.Controllers
 {
+  // allows access only if user is logged in
+  [Authorize]
   public class ItemsController : Controller
   {
     
     private readonly ToDoListContext _db;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    // 'ToDoListContext' is the exact one from Program.cs
-    public ItemsController(ToDoListContext db)
+    // we need an instance of UserManager in order to access the tools that get us data about the signed-in user
+    public ItemsController(UserManager<ApplicationUser> userManager, ToDoListContext db)
     {
+      _userManager = userManager;
       _db = db;
     }
 
-    public ActionResult Index()
+    public async Task<ActionResult> Index()
     {
+      string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+      ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
       // 'Items' matches what's set in ToDoListContext.cs
       List<Item> model = _db.Items
+                            .Where(entry => entry.User.Id == currentUser.Id)
                             .Include(item => item.Category)
                             .OrderBy(item => item.DueBy)
                             .OrderBy(item => item.Status)
@@ -47,6 +58,11 @@ namespace ToDoList.Controllers
         }
         else
         {
+          // Find current user
+          string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+          ApplicationUser currentUser = await _userManager.FindByIdAsync(userId);
+          // Associate currentUser with item's User property
+          item.User = currentUser;
           // Update DbSet  
           _db.Items.Add(item);
           // Update DbContext 

@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ToDoList.Models
 {
-  public class ToDoListContext : DbContext
+                                 // IdentityDbContext<ApplicationUser>
+                                 //  <ApplicationUser> tells Identity which class contains user acct info it needs to authenticate
+  public class ToDoListContext : IdentityDbContext<ApplicationUser>
   {
     public DbSet<Category> Categories { get; set; }  
     public DbSet<Item> Items { get; set; }
